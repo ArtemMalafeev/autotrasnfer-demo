@@ -1,0 +1,88 @@
+/* Loader */
+
+.loader {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    background: #F3DFC1;
+    border: 4px solid #161029;
+}
+
+/* Title */
+
+.loader__title {
+    position: absolute;
+    z-index: 9999999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    color: #161029;
+
+    @media screen and (min-width: $tablet-width) {
+        gap: 40px;
+    }
+}
+
+/* Name */
+
+.loader__name {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 117.6%;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-width) {
+        font-size: 32px;
+    }
+}
+
+/* Text */
+
+.loader__text {
+    text-transform: uppercase;
+}
+
+/* Item */
+
+.loader__item {
+    z-index: 99999999;
+    flex: 1 1 auto;
+    background: linear-gradient(0deg, rgb(8 6 15 / 100%) 0%, rgb(22 15 41 / 100%) 70%);
+
+    &--1 {
+        border-right: 3px solid $gold;
+    }
+}
+
+/* Logo */
+
+.loader__logo {
+    display: flex;
+    width: 128px;
+    height: 43px;
+    color: #161029;
+
+    @media screen and (min-width: $tablet-width) {
+        width: 140px;
+        height: 50px;
+    }
+}
+
+.loader__logo svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

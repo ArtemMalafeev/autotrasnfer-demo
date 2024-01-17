@@ -1,0 +1,82 @@
+/* Form */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* List */
+
+.form__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        column-gap: 30px;
+    }
+}
+
+/* Input */
+
+.form__input {
+    padding: 10px;
+
+    font-size: var(--medium-font-size);
+    color: $gold;
+    text-align: center;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $white;
+    outline: none;
+
+    transition: all .25s ease;
+
+    &::placeholder {
+        font-size: var(--medium-font-size);
+        color: $white;
+        text-align: center;
+    }
+
+    &:focus {
+        backdrop-filter: blur(5px);
+    }
+}
+
+/* Text */
+
+.form__text {
+    resize: none;
+
+    width: 100%;
+    max-width: 500px;
+    min-height: 200px;
+    padding: 20px;
+
+    font-size: var(--medium-font-size);
+    color: $gold;
+
+    background: transparent;
+    border: 1px solid $white;
+    outline: none;
+
+    transition: all .25s ease;
+
+    &::placeholder {
+        font-size: var(--medium-font-size);
+        color: $white;
+    }
+
+    &:focus {
+        backdrop-filter: blur(5px);
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        max-width: 700px;
+    }
+}

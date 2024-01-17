@@ -1,0 +1,255 @@
+/* Main */
+
+.hero {
+    position: relative;
+    z-index: 100;
+
+    overflow: hidden;
+
+    margin-top: 220px;
+    padding-bottom: 70px;
+
+    background: linear-gradient(180deg, rgb(22 15 41 / 100%) 30%, rgb(8 6 15 / 100%) 90%);
+
+    @media screen and (min-width: $tablet-width) {
+        margin-top: 190px;
+        padding-bottom: 150px;
+    }
+}
+
+/* Inner */
+
+.hero__inner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+    height: 100%;
+
+    @media screen and (min-width: $tablet-width) {
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* Map */
+
+.hero__map {
+    position: absolute;
+    z-index: -5;
+    top: 50%;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, -44%);
+
+    width: 100%;
+    height: auto;
+
+}
+
+.hero__map svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Title */
+
+.hero__title {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-family: $second-font;
+    font-size: 22px;
+    font-weight: 700;
+    color: $gold;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $tablet-width) {
+        max-width: 700px;
+        font-size: 30px;
+    }
+
+    @media screen and (width >=960px) {
+        max-width: 1000px;
+        font-size: var(--h1-font-size);
+    }
+}
+
+/* Preview */
+
+.hero__preview {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Car */
+
+.hero__car {
+    position: relative;
+    z-index: 5;
+
+    width: 80%;
+    max-width: 903px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero__car img {
+    @include image;
+}
+
+/* Controllers */
+
+.hero__controllers {
+    position: relative;
+    display: flex;
+    column-gap: 60px;
+    align-items: top;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 160%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: calc(100vw - 20%);
+        max-width: 950px;
+        height: calc((100vw - 20%) / 6);
+        max-height: 200px;
+
+        backdrop-filter: blur(8px);
+        border: 3px solid #F3DFC1;
+        border-radius: 50%;
+        box-shadow: 0 -3px 10.7px 0 #F3DFC1;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: none;
+
+        width: calc(100vw - 30%);
+        max-width: 920px;
+        height: calc((100vw - 20%) / 8);
+        max-height: 200px;
+
+        background: linear-gradient(-30deg, rgb(8 6 15 / 100%) 0%, rgb(22 15 41 / 0%) 90%);
+        backdrop-filter: blur(2px);
+        border: 1px solid #F3DFC1;
+        border-radius: 50%;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        column-gap: 210px;
+
+        &::before {
+            display: block;
+        }
+    }
+}
+
+/* Point */
+
+.hero__point {
+    cursor: pointer;
+
+    display: flex;
+
+
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+
+    color: $gold;
+
+    background-color: transparent;
+    border: 0;
+
+    transition: all .25s ease;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+
+    &:active {
+        transform: scale(1.1);
+        color: $grey;
+    }
+}
+
+.hero__point svg {
+    display: block;
+    width: 8px;
+    height: 8px;
+}
+
+/* Scroll */
+
+
+.hero__scroll {
+    width: 25px;
+    height: 37px;
+    color: $gold;
+    transition: all .25s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(1);
+        color: $grey;
+    }
+}
+
+.hero__scroll svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__scroll svg path:nth-child(2) {
+    animation: identifier 1.5s ease-in-out 0.0s infinite;
+}
+
+.hero__scroll svg path:nth-child(3) {
+    animation: identifier 1.5s ease-in-out 0.25s infinite;
+}
+
+.hero__scroll svg path:nth-child(4) {
+    animation: identifier 1.5s ease-in-out 0.5s infinite;
+}
+
+@keyframes identifier {
+    0% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,55 @@
+/* Viewports */
+
+$tablet-width: 768px;
+$desktop-width: 1314px;
+
+/* Fonts */
+
+$main-font: 'Circe', sans-serif;
+$second-font: 'Toxigenesis', sans-serif;
+$third-font: 'Monument Extended', sans-serif;
+
+/* Sizes */
+
+:root {
+    --h1-font-size: 2rem; // 32px *
+    --h2-font-size: 2rem; // 32px *
+
+    --small-font-size: 1rem; // 16px
+    --normal-font-size: 1rem; // 16px *
+    --medium-font-size: 1.125rem; // 18px *
+    --big-font-size: 1.5rem; // 24px *
+    --large-font-size: 1.5rem; // 32px *
+    --huge-font-size: 3rem; // 48px *
+    --very-huge-font-size: 6rem; // 180px *
+
+    --logo-font-sise: 1.8125rem; // 29px
+
+    @media screen and (min-width: $tablet-width) {
+        --h1-font-size: 3.125rem; // 50px
+        --h2-font-size: 3.125rem; // 50px
+
+        --small-font-size: 1rem; // 16px
+        --normal-font-size: 1.25rem; // 20px
+        --medium-font-size: 1.5rem; // 24px
+        --big-font-size: 2.25rem; // 36px
+        --large-font-size: 3.125rem; // 50px
+        --huge-font-size: 7.25rem; // 116px
+        --very-huge-font-size: 8.25rem; // 180px
+
+        --logo-font-sise: 1.8125rem; // 29px
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        --very-huge-font-size: 11.25rem; // 180px
+    }
+}
+
+/* Colors */
+
+$gold: #F3DFC1;
+$dark-gold: #DDBEA8;
+$white: #FFFFFF;
+$grey: #B7B7B7;
+$dark: #0B0814;
+$dark-purple: #161029;

@@ -1,0 +1,166 @@
+/* Card */
+
+.card {
+    cursor: pointer;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 80%;
+    max-width: 338px;
+    min-height: 400px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    background: linear-gradient(0deg, #100B1F 0.95%, #0A0712 100%);
+    border: 1px solid $gold;
+
+    transition: all .25s ease;
+
+    @media screen and (min-width: $tablet-width) {
+        width: 100%;
+        min-height: 476px;
+    }
+}
+
+// .card:hover {
+//     transform: scale(1.1);
+// }
+
+/* Header */
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    text-align: center;
+}
+
+/* Footer */
+
+.card__footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        z-index: 100;
+        bottom: 40px;
+        left: 0;
+
+        width: 100%;
+        height: 120px;
+
+        opacity: 0;
+        background-image: url('../assets/images/card/decorate/smoke.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transition: all 2s ease;
+    }
+
+    @media screen and (width >= 450px) {
+        &::after {
+            bottom: 70px;
+        }
+    }
+}
+
+/* List */
+
+.card__list {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+    color: $gold;
+
+    &--option {
+        column-gap: 18px;
+    }
+}
+
+/* Car */
+
+.card__car {
+    position: absolute;
+    bottom: 88px;
+    overflow: hidden;
+}
+
+/* Image */
+
+.card__image {
+    position: relative;
+    left: -70%;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: auto;
+
+    transition: all 1s ease;
+}
+
+.card__image img {
+    width: 100%;
+    height: auto;
+
+    @media screen and (width >= 450px) {
+        width: initial;
+        height: initial;
+    }
+}
+
+.card:hover .card__image {
+    left: 0;
+
+}
+
+.card:hover .card__footer::after {
+    opacity: 1;
+}
+
+/* Smoke */
+
+// .card__smoke {
+//     position: absolute;
+//     bottom: 65px;
+//     opacity: 0;
+//     transition: all 2s ease;
+// }
+
+// .card:hover .card__smoke {
+//     opacity: 1;
+// }
+
+/* Price */
+
+.card__price {
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+}
+
+/* Title */
+
+.card__title {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: var(--large-font-size);
+    font-weight: 700;
+    line-height: 117.6%;
+    color: $white;
+    text-transform: uppercase;
+    white-space: nowrap;
+}

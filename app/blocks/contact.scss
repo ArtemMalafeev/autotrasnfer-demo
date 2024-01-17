@@ -1,0 +1,92 @@
+/* Contact */
+
+.contact {
+    position: relative;
+    z-index: 100;
+    padding-block: 50px;
+    background-color: $dark;
+
+    @media screen and (min-width: $tablet-width) {
+        padding-block: 80px;
+    }
+}
+
+/* Inner */
+
+.contact__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+/* Image */
+
+.contact__image {
+    position: absolute;
+    z-index: -5;
+    inset: 0;
+}
+
+.contact__image img {
+    @include image;
+}
+
+/* Top */
+
+.contact__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @media screen and (min-width: $tablet-width) {
+        padding-inline: 140px;
+    }
+}
+
+/* Description */
+
+.contact__description {
+    max-width: 938px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: var(--big-font-size);
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* List */
+
+.contact__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px 50px;
+    justify-content: space-between;
+
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $tablet-width) {
+        grid-template-columns: repeat(auto-fit,
+                minmax(492px, 1fr));
+        max-width: 100%;
+        margin-right: initial;
+        margin-left: initial;
+    }
+}
+
+/* Item */
+
+.contact__item {
+    text-align: center;
+    backdrop-filter: blur(50px);
+
+    // box-shadow: 5px 5px 12px 0 rgb(243 223 193 / 20%);
+
+    @media screen and (min-width: $desktop-width) {
+        text-align: initial;
+    }
+}

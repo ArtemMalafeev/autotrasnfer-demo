@@ -1,0 +1,26 @@
+/* Cards */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+
+
+    @media screen and (width >= 888px) {
+        flex-flow: row wrap;
+        column-gap: 120px;
+        justify-content: space-between;
+
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-inline: 30px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        max-width: initial;
+        margin-right: initial;
+        margin-left: initial;
+    }
+}

@@ -1,0 +1,13 @@
+/* Title */
+
+.title {
+    font-family: $second-font;
+    font-size: var(--h2-font-size);
+    font-weight: 700;
+    color: $gold;
+    text-transform: uppercase;
+
+    &--white {
+        color: $white;
+    }
+}

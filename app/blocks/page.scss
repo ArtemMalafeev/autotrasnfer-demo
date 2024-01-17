@@ -1,0 +1,31 @@
+/* Page */
+
+.page {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    font-family: $main-font;
+    font-size: var(--normal-font-size);
+
+    background-color: $dark-purple;
+}
+
+/* Header */
+
+.page__header {
+    grid-area: header;
+}
+
+/* Main */
+
+.page__main {
+    flex: 1;
+}
+
+/* Footer */
+
+.page__footer {
+    grid-area: footer;
+}

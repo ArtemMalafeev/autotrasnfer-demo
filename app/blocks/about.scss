@@ -1,0 +1,132 @@
+/* About */
+
+.about {
+    position: relative;
+    padding-block: 50px;
+    background: linear-gradient(180deg, rgb(6 5 12 / 100%) 0%, rgb(22 16 41 / 100%) 85%);
+
+    @media screen and (min-width: $desktop-width) {
+        padding-block: 100px;
+    }
+}
+
+/* Anchor */
+
+.about__anchor {
+    position: absolute;
+    top: -50px;
+    display: block;
+}
+
+/* Inner */
+
+.about__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+
+    @media screen and (width >=1052px) {
+        flex-direction: row;
+        column-gap: 40px;
+        align-items: center;
+    }
+}
+
+/* Image */
+
+.about__image {
+    flex-shrink: 0;
+
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $tablet-width) {
+        column-gap: 40px;
+    }
+}
+
+.about__image img {
+    @include image;
+
+    object-fit: contain;
+}
+
+/* Information */
+
+.about__information {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    max-width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+
+    @media screen and (min-width: $desktop-width) {
+        max-width: 100%;
+        text-align: initial;
+    }
+}
+
+/* Description */
+
+.about__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: 500px;
+
+    @media screen and (min-width: $tablet-width) {
+        row-gap: 60px;
+        max-width: 700px;
+    }
+}
+
+/* Text */
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+/* Chunk */
+
+.about__chunk {
+    line-height: 117.6%;
+    color: $white;
+
+    &--important {
+        color: $gold;
+    }
+}
+
+/* Owner */
+
+.about__owner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Name */
+
+.about__name {
+    font-size: var(--big-font-size);
+    font-weight: 700;
+    line-height: 117.6%;
+    color: $gold;
+}
+
+/* Role */
+
+.about__role {
+    font-weight: 300;
+    line-height: 117.6%;
+    color: $gold;
+    text-transform: uppercase;
+}

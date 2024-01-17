@@ -1,0 +1,70 @@
+/* Tarrifs */
+
+.tariffs {
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(8 6 15 / 100%) 0%, rgb(11 8 20 / 100%) 30%);
+}
+
+/* Anchor */
+
+.tariffs__anchor {
+    position: absolute;
+    top: -80px;
+    display: block;
+}
+
+/* Inner */
+
+.tariffs__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding-bottom: 110px;
+}
+
+/* Smoke */
+
+.tarrifs__smoke {
+    position: absolute;
+    z-index: -5;
+    bottom: 40%;
+
+    width: 100%;
+    height: auto;
+
+    mix-blend-mode: hard-light;
+
+    &--secondary {
+        filter: blur(1px);
+        mix-blend-mode: initial;
+    }
+
+    @media screen and (width >=490px) {
+        bottom: 30%;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        bottom: 35%;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        bottom: 0;
+    }
+}
+
+.tarrifs__smoke img {
+    @include image;
+}
+
+/* Ticker */
+
+.tarrifs__ticker {
+    position: absolute;
+    z-index: -6;
+    top: 30%;
+
+    font-size: var(--very-huge-font-size);
+    color: rgb(22 15 41 / 48%);
+}

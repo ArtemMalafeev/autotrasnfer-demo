@@ -1,0 +1,43 @@
+/* Button */
+
+.button {
+    cursor: pointer;
+
+    min-width: 233px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-inline: 20px;
+
+    font-family: $main-font;
+    font-size: var(--normal-font-size);
+    font-weight: 800;
+    color: $dark;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: $gold;
+    border: 1px solid transparent;
+    border-radius: 70px;
+
+    transition: all .25s ease;
+
+    &:hover {
+        color: $white;
+        background-color: transparent;
+        border-color: $white;
+    }
+
+    &:active {
+        transform: translateY(5px);
+    }
+
+    &--secondary {
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $gold;
+    }
+
+    &--secondary:hover {
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29"
+    fill="currentColor">
+    <rect x="21.2852" y="6.2854" width="2.22222" height="20"
+        transform="rotate(45 21.2852 6.2854)" />
+    <rect width="2.22222" height="20"
+        transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 21.2852 21.9989)" />
+</svg>

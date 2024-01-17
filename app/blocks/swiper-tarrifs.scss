@@ -1,0 +1,71 @@
+/* Swiper */
+
+.swiper-tarrifs {
+    position: relative;
+}
+
+/* Controllers */
+
+.swiper-tarrifs__controllers {
+    position: absolute;
+    z-index: 100;
+    top: 1.1%;
+    width: 100%;
+
+    @media screen and (min-width: $tablet-width) {
+        top: 3%;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        top: 9%;
+    }
+}
+
+/* Inner */
+
+.swiper-tarrifs__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (width >= 450px) {
+        padding-inline: 32px;
+    }
+}
+
+/* Button */
+
+.swiper-tarrifs__button {
+    cursor: pointer;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    color: $white;
+
+    background-color: transparent;
+    border: 0;
+
+    transition: all .25s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: initial;
+        color: $gold;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        width: 26px;
+        height: 25px;
+    }
+}
+
+.swiper-tarrifs__button svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,25 @@
+/* Phone */
+
+/* Phone */
+
+.phone {
+    font-family: $second-font;
+    font-size: var(--medium-font-size);
+    font-weight: 700;
+    line-height: 117.6%;
+    color: $gold;
+
+    transition: all .25s ease;
+
+    &:hover {
+        color: $white;
+    }
+
+    &:active {
+        color: $grey;
+    }
+
+    &--big {
+        font-size: var(--large-font-size);
+    }
+}

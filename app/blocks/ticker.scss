@@ -1,0 +1,41 @@
+/* Ticker */
+
+.ticker {
+    overflow: hidden;
+}
+
+/* Wrapper */
+
+.ticker__wrapper {
+    display: flex;
+}
+
+/* Item */
+
+.ticker__item {
+    flex-shrink: 0;
+
+    padding: 0 50px;
+
+    font-family: $second-font;
+    font-weight: 700;
+    line-height: 117.6%;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    animation: ticker 10s linear infinite;
+
+    @media screen and (min-width: $tablet-width) {
+        padding: 0 126px;
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

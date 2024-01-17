@@ -1,0 +1,143 @@
+/* Navigation */
+
+/* List */
+
+.navigation__list {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: -16px;
+    left: -200%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    padding-top: 140px;
+
+    background: linear-gradient(180deg, #08060F 0%, #160F29 100%);
+
+    transition: all .5s ease;
+
+    &--open {
+        left: -16px;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        position: initial;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        height: min-content;
+        padding: 0;
+
+        background: transparent;
+    }
+}
+
+/* Item */
+
+.navigation__item {
+    font-size: 24px;
+
+    @media screen and (min-width: $tablet-width) {
+        font-size: initial;
+
+        &:nth-child(2) {
+            margin-right: 130px;
+        }
+
+        &:nth-child(3) {
+            margin-left: 130px;
+        }
+
+        &--phone,
+        &--media {
+            display: none;
+        }
+    }
+}
+
+/* Link */
+
+.navigation__link {
+    width: 90px;
+    height: 32px;
+
+    font-family: $second-font;
+    font-weight: 700;
+    line-height: 117.6%;
+    color: $grey;
+
+    transition: all .25s ease;
+
+    &:hover {
+        color: $white;
+    }
+
+    &:active {
+        color: $grey;
+    }
+
+    &--active {
+        color: $gold;
+    }
+}
+
+/* Icon */
+
+.navigation__icon {
+    position: absolute;
+    z-index: 200;
+    top: 24px;
+    right: 0;
+    left: 0;
+
+    width: max-content;
+    height: 26px;
+    margin: auto;
+
+    color: $white;
+
+    transition: all .25s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        color: $gold;
+    }
+
+    &:active {
+        transform: scale(1);
+        color: $white;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        top: 18px;
+        height: 32px;
+    }
+}
+
+.navigation__icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Toggle */
+
+.navigation__toggle {
+    position: relative;
+    z-index: 200;
+    background-color: transparent;
+    border: 0;
+
+    @media screen and (min-width: $tablet-width) {
+        display: none;
+    }
+}

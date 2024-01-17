@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="37" viewBox="0 0 24 37"
+    fill="none">
+    <rect x="1.5" y="1.5" width="21" height="33.1326" stroke="#EEE0C5" stroke-width="3" />
+    <path class="arrow1" d="M12.0574 12.1626L6.46154 4.10601L17.6533 4.10601L12.0574 12.1626Z"
+        fill="#F3DFC1" />
+    <path class="arrow2" d="M12 22.1724L6.40414 14.1158L17.5959 14.1158L12 22.1724Z" fill="#F3DFC1"
+        fill-opacity="0.5" />
+    <path class="arrow3" d="M12 32.0933L6.40414 24.0367L17.5959 24.0367L12 32.0933Z" fill="#F3DFC1"
+        fill-opacity="0.25" />
+</svg>

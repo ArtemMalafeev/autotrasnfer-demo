@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autotransfer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+
+<body class="page preload">
+    <div class="loader">
+        <div class="loader__title">
+            <div class="loader__logo">
+                <svg viewBox="0 0 128 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path class="loader__top" d="M32.734 0H94.5522L106 18H21L32.734 0Z" />
+                    <path class="loader__bottom" d="M41.5589 43H86.6498L95 30H33L41.5589 43Z" />
+                    <path class="loader__left" d="M4.41754e-06 22H25.5129L33 30H7.48713L4.41754e-06 22Z" />
+                    <path class="loader__right" d="M128 22H102.487L95 30H120.513L128 22Z" />
+                </svg>
+                <span class="visually-hidden">Логотип лоадера</span>
+            </div>
+            <div class="loader__name">
+                <p class="loader__text">Platov</p>
+                <p class="loader__text">Transfer</p>
+            </div>
+        </div>
+        <div class="loader__item loader__item--1"></div>
+        <div class="loader__item loader__item--2"></div>
+    </div>
+
+    <header class="page__header header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__preview">
+                    <a class="header__phone phone" target="_blank" href="tel:+78001112233">
+                        +7 800 111 22 33
+                    </a>
+
+                    <div class="header__logo logo">
+                        <div class="logo__icon">
+                            <svg width="128" height="43">
+                                <use xlink:href="assets/images/sprite.svg#logo" />
+                            </svg>
+                        </div>
+                        <p class="logo__text">
+                            <span>PLATOV</span>
+                            <span>TRANSFER</span>
+                        </p>
+                    </div>
+
+                    <ul class="header__media media">
+                        <li class="media__item">
+                            <a class="media__link media__link--tg" href="#">
+                                <svg width="31" height="31">
+                                    <use xlink:href="assets/images/sprite.svg#telegram" />
+                                </svg>
+                                <span class="visually-hidden">Телеграмм</span>
+                            </a>
+                        </li>
+
+                        <li class="media__item">
+                            <a class="media__link media__link--whatsapp" href="#">
+                                <svg width="31" height="31">
+                                    <use xlink:href="assets/images/sprite.svg#whatsapp" />
+                                </svg>
+                                <span class="visually-hidden">Вотсапп</span>
+                            </a>
+                        </li>
+
+                        <li class="media__item">
+                            <a class="media__link media__link--vk" href="#">
+                                <svg width="31" height="31">
+                                    <use xlink:href="assets/images/sprite.svg#vk" />
+                                </svg>
+                                <span class="visually-hidden">Вконтакте</span>
+                            </a>
+                        </li>
+
+                        <li class="media__item">
+                            <a class="media__link media__link--avito" href="#">
+                                <svg width="29" height="29">
+                                    <use xlink:href="assets/images/sprite.svg#avito" />
+                                </svg>
+                                <span class="visually-hidden">Авито</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <nav class="header__navigation navigation" id="nav">
+                    <button class="navigation__toggle toggle" id="nav-toggle" type="button">
+                        <div class="toggle__top"></div>
+                        <div class="toggle__middle"></div>
+                        <div class="toggle__bottom"></div>
+                        <span class="visually-hidden">Меню</span>
+                    </button>
+                    <ul class="navigation__list" id="nav-list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#tarrifs">
+                                Тарифы
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#about">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#reviews">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="navigation__item navigation__item--phone">
+                            <a class="navigation__phone phone" target="_blank" href="tel:+78001112233">
+                                +7 800 111 22 33
+                            </a>
+                        </li>
+                        <li class="navigation__item navigation__item--media">
+                            <ul class="navigation__media media">
+                                <li class="media__item">
+                                    <a class="media__link media__link--tg" href="#">
+                                        <svg width="31" height="31">
+                                            <use xlink:href="assets/images/sprite.svg#telegram" />
+                                        </svg>
+                                        <span class="visually-hidden">Телеграмм</span>
+                                    </a>
+                                </li>
+
+                                <li class="media__item">
+                                    <a class="media__link media__link--whatsapp" href="#">
+                                        <svg width="31" height="31">
+                                            <use xlink:href="assets/images/sprite.svg#whatsapp" />
+                                        </svg>
+                                        <span class="visually-hidden">Вотсапп</span>
+                                    </a>
+                                </li>
+
+                                <li class="media__item">
+                                    <a class="media__link media__link--vk" href="#">
+                                        <svg width="31" height="31">
+                                            <use xlink:href="assets/images/sprite.svg#vk" />
+                                        </svg>
+                                        <span class="visually-hidden">Вконтакте</span>
+                                    </a>
+                                </li>
+
+                                <li class="media__item">
+                                    <a class="media__link media__link--avito" href="#">
+                                        <svg width="29" height="29">
+                                            <use xlink:href="assets/images/sprite.svg#avito" />
+                                        </svg>
+                                        <span class="visually-hidden">Авито</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <a class="navigation__icon" aria-label="Company logo" href="#">
+                        <svg width="128" height="43">
+                            <use xlink:href="assets/images/sprite.svg#logo" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page__main main">
+        <section class="hero">
+            <div class="hero__inner">
+                <h1 class="hero__title">
+                    <div class="container">
+                        Деловые поездки повышенного комфорта<br> в северокавказском округе
+                    </div>
+                </h1>
+
+
+                <div class="hero__preview">
+                    <div class="swiper-grid">
+                        <div class="swiper swiper-hero">
+                            <div class="swiper-wrapper swiper-hero__wrapper">
+                                <div class="swiper-slide">
+                                    <div class="hero__car">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="assets/images/hero/mercedes.webp 1x, assets/images/hero/mercedes@2x.webp 2x">
+                                            <img src="assets/images/hero/mercedes.png"
+                                                srcset="assets/images/hero/mercedes@2x.png 2x" width="902" height="390"
+                                                alt="Mercedes S63 Coupe" title="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="hero__car">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="assets/images/hero/mercedes.webp 1x, assets/images/hero/mercedes@2x.webp 2x">
+                                            <img src="assets/images/hero/mercedes.png"
+                                                srcset="assets/images/hero/mercedes@2x.png 2x" width="902" height="390"
+                                                alt="Mercedes S63 Coupe" title="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="hero__car">
+                                        <picture>
+                                            <source type="image/webp"
+                                                srcset="assets/images/hero/mercedes.webp 1x, assets/images/hero/mercedes@2x.webp 2x">
+                                            <img src="assets/images/hero/mercedes.png"
+                                                srcset="assets/images/hero/mercedes@2x.png 2x" width="902" height="390"
+                                                alt="Mercedes S63 Coupe" title="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__controllers">
+                        <button class="hero__point" type="button" onClick="showPrevCar()">
+                            <svg width="8" height="8">
+                                <use xlink:href="assets/images/sprite.svg#point" />
+                            </svg>
+                            <span class="visually-hidden">Предыдущий слайд</span>
+                        </button>
+
+                        <a class="hero__scroll" href="#tarrifs" aria-label="Переход к следующей странице">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="37" viewBox="0 0 24 37"
+                                fill="none">
+                                <rect x="1.5" y="1.5" width="21" height="33.1326" stroke="currentColor"
+                                    stroke-width="3" />
+                                <path d="M12.0574 12.1626L6.46154 4.10601L17.6533 4.10601L12.0574 12.1626Z"
+                                    fill="currentColor" />
+                                <path d="M12 22.1724L6.40414 14.1158L17.5959 14.1158L12 22.1724Z" fill="currentColor"
+                                    fill-opacity="0.5" />
+                                <path d="M12 32.0933L6.40414 24.0367L17.5959 24.0367L12 32.0933Z" fill="currentColor"
+                                    fill-opacity="0.25" />
+                            </svg>
+                        </a>
+
+                        <button class="hero__point" type="button" onClick="showNextCar()">
+                            <svg width="8" height="8">
+                                <use xlink:href="assets/images/sprite.svg#point" />
+                            </svg>
+                            <span class="visually-hidden">Следующий слайд</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero__map">
+                    <div class="container">
+                        <svg width="1395" height="1080">
+                            <use xlink:href="assets/images/sprite.svg#map" />
+                        </svg>
+                    </div>
+                </div>
+        </section>
+
+        <section class="tariffs">
+            <a class="tariffs__anchor visually-hidden" id="tarrifs"></a>
+
+            <h2 class="tarrifs__title title visually-hidden">
+                Тарифы
+            </h2>
+
+            <div class="swiper swiper-tarrifs">
+                <div class="swiper-wrapper">
+                    <div class="tarrifs__inner swiper-slide" data-tarrif="comfort-plus">
+                        <div class="container">
+                            <div class="tarrifs__tarrif tarrif">
+                                <h3 class="tarrif__title" data-swiper-parallax="-300">
+                                    Comfort plus
+                                </h3>
+                                <div class="tarrif__top">
+                                    <p class="tarrif__description" data-swiper-parallax="-600">
+                                        В тарифе “Comfort plus”, представленны автомобили повышенного класса комфорта и
+                                        безопасности. Также в этом тарифе вы бесплатно можете воспользоваться
+                                        дополнительными опциями.
+                                    </p>
+                                    <div class="tarrif__information" data-swiper-parallax="-800">
+                                        <div class="tarrif__section">
+                                            <p class="tarrif__section-name">
+                                                Модели автомобилей
+                                            </p>
+                                            <ul class="tarrif__models">
+                                                <li class="tarrif__model">
+                                                    Mercedes
+                                                </li>
+
+                                                <li class="tarrif__model">
+                                                    Bmw
+                                                </li>
+
+                                                <li class="tarrif__model">
+                                                    Lexus
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tarrif__section">
+                                            <p class="tarrif__section-name">
+                                                Стоимость за час
+                                            </p>
+                                            <p class="tarrif__price">
+                                                <span class="tarrif__value">1300</span> руб.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tarrif__image" data-swiper-parallax="-1000">
+                                    <picture>
+                                        <source type="image/webp"
+                                            srcset="assets/images/tarrifs/cars/mercedes.webp 1x, assets/images/tarrifs/cars/mercedes@2x.webp 2x">
+                                        <img src="assets/images/tarrifs/cars/mercedes.png"
+                                            srcset="assets/images/tarrifs/cars/mercedes@2x.png 2x" width="1253"
+                                            height="434" alt="Mercedes E200" title="">
+                                    </picture>
+                                </div>
+                                <div class="tarrif__footer" data-swiper-parallax="-600">
+                                    <div class="tarrif__points">
+                                        <div class="tarrif__option">
+                                            <p class="tarrif__option-name">
+                                                Опции тарифа
+                                            </p>
+                                            <ul class="tarrif__option-list">
+                                                <li class="tarrif__option-item tarrif__option-item--wifi">
+                                                    <svg width="35" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#wifi" />
+                                                    </svg>
+                                                    <div class="tarrif__notification">
+                                                        <p class="tarrif__notification-text">Доступ к WIFI</p>
+                                                    </div>
+                                                </li>
+
+                                                <li class="tarrif__option-item">
+                                                    <svg width="35" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#music" />
+                                                    </svg>
+                                                    <div class="tarrif__notification">
+                                                        <p class="tarrif__notification-text">Доступ к системе
+                                                            мультимедиа</p>
+                                                    </div>
+                                                </li>
+
+                                                <li class="tarrif__option-item">
+                                                    <svg width="26" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#charger" />
+                                                    </svg>
+                                                    <div class="tarrif__notification">
+                                                        <p class="tarrif__notification-text">Доступ к зарядному
+                                                            устройству</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tarrif__passengers">
+                                            <p class="tarrif__passengers-name">
+                                                Число пассажиров
+                                            </p>
+                                            <ul class="tarrif__passengers-list">
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="tarrif__buttons">
+                                        <button class="tarrif__button button button--secondary"
+                                            onClick="openModal('.modal--tarrifs')">
+                                            Все тарифные планы
+                                        </button>
+
+                                        <a class="tarrif__button button" target="_blank" href="tel:+78001112233">
+                                            Заказать сейчас
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarrifs__inner swiper-slide" data-tarrif="comfort">
+                        <div class="container">
+                            <div class="tarrifs__tarrif tarrif">
+                                <h3 class="tarrif__title" data-swiper-parallax="-300">
+                                    Comfort
+                                </h3>
+                                <div class="tarrif__top">
+                                    <p class="tarrif__description" data-swiper-parallax="-600">
+                                        В тарифе “Comfort plus”, представленны автомобилы повышенного класса комфорта и
+                                        безопасности. Также в этом тарифе вы бесплатно можете воспользоваться
+                                        дополнительными
+                                        опциями.
+                                    </p>
+                                    <div class="tarrif__information" data-swiper-parallax="-800">
+                                        <div class="tarrif__section">
+                                            <p class="tarrif__section-name">
+                                                Модели автомобилей
+                                            </p>
+                                            <ul class="tarrif__models">
+                                                <li class="tarrif__model">
+                                                    Mercedes
+                                                </li>
+
+                                                <li class="tarrif__model">
+                                                    Bmw
+                                                </li>
+
+                                                <li class="tarrif__model">
+                                                    Lexus
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tarrif__section">
+                                            <p class="tarrif__section-name">
+                                                Стоимость за час
+                                            </p>
+                                            <p class="tarrif__price">
+                                                <span class="tarrif__value">1300</span> руб.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tarrif__image" data-swiper-parallax="-1000">
+                                    <picture>
+                                        <source type="image/webp"
+                                            srcset="assets/images/tarrifs/cars/mercedes.webp 1x, assets/images/tarrifs/cars/mercedes@2x.webp 2x">
+                                        <img src="assets/images/tarrifs/cars/mercedes.png"
+                                            srcset="assets/images/tarrifs/cars/mercedes@2x.png 2x" width="1253"
+                                            height="434" alt="Mercedes E200" title="">
+                                    </picture>
+                                </div>
+                                <div class="tarrif__footer" data-swiper-parallax="-600">
+                                    <div class="tarrif__points">
+                                        <div class="tarrif__option">
+                                            <p class="tarrif__option-name">
+                                                Опции тарифа
+                                            </p>
+                                            <ul class="tarrif__option-list">
+                                                <li class="tarrif__option-item">
+                                                    <svg width="48" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#wifi" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__option-item">
+                                                    <svg width="35" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#music" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__option-item">
+                                                    <svg width="26" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#charger" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tarrif__passengers">
+                                            <p class="tarrif__passengers-name">
+                                                Число пассажиров
+                                            </p>
+                                            <ul class="tarrif__passengers-list">
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="tarrif__buttons">
+                                        <button class="tarrif__button button button--secondary"
+                                            onClick="openModal('.modal--tarrifs')">
+                                            Все тарифные планы
+                                        </button>
+
+                                        <a class="tarrif__button button" target="_blank" href="tel:+78001112233">
+                                            Заказать сейчас
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarrifs__inner swiper-slide" data-tarrif="standart-plus">
+                        <div class="container">
+                            <div class="tarrifs__tarrif tarrif">
+                                <h3 class="tarrif__title" data-swiper-parallax="-300">
+                                    Standart Plus
+                                </h3>
+                                <div class="tarrif__top">
+                                    <p class="tarrif__description" data-swiper-parallax="-600">
+                                        В тарифе “Comfort plus”, представленны автомобилы повышенного класса комфорта и
+                                        безопасности. Также в этом тарифе вы бесплатно можете воспользоваться
+                                        дополнительными
+                                        опциями.
+                                    </p>
+                                    <div class="tarrif__information" data-swiper-parallax="-800">
+                                        <div class="tarrif__section">
+                                            <p class="tarrif__section-name">
+                                                Модели автомобилей
+                                            </p>
+                                            <ul class="tarrif__models">
+                                                <li class="tarrif__model">
+                                                    Mercedes
+                                                </li>
+
+                                                <li class="tarrif__model">
+                                                    Bmw
+                                                </li>
+
+                                                <li class="tarrif__model">
+                                                    Lexus
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tarrif__section">
+                                            <p class="tarrif__section-name">
+                                                Стоимость за час
+                                            </p>
+                                            <p class="tarrif__price">
+                                                <span class="tarrif__value">1300</span> руб.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tarrif__image" data-swiper-parallax="-1000">
+                                    <picture>
+                                        <source type="image/webp"
+                                            srcset="assets/images/tarrifs/cars/mercedes.webp 1x, assets/images/tarrifs/cars/mercedes@2x.webp 2x">
+                                        <img src="assets/images/tarrifs/cars/mercedes.png"
+                                            srcset="assets/images/tarrifs/cars/mercedes@2x.png 2x" width="1253"
+                                            height="434" alt="Mercedes E200" title="">
+                                    </picture>
+                                </div>
+                                <div class="tarrif__footer" data-swiper-parallax="-600">
+                                    <div class="tarrif__points">
+                                        <div class="tarrif__option">
+                                            <p class="tarrif__option-name">
+                                                Опции тарифа
+                                            </p>
+                                            <ul class="tarrif__option-list">
+                                                <li class="tarrif__option-item">
+                                                    <svg width="48" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#wifi" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__option-item">
+                                                    <svg width="35" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#music" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__option-item">
+                                                    <svg width="26" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#charger" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tarrif__passengers">
+                                            <p class="tarrif__passengers-name">
+                                                Число пассажиров
+                                            </p>
+                                            <ul class="tarrif__passengers-list">
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+
+                                                <li class="tarrif__passengers-item">
+                                                    <svg width="37" height="35">
+                                                        <use xlink:href="assets/images/sprite.svg#passenger" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="tarrif__buttons">
+                                        <button class="tarrif__button button button--secondary"
+                                            onClick="openModal('.modal--tarrifs')">
+                                            Все тарифные планы
+                                        </button>
+
+                                        <a class="tarrif__button button" target="_blank" href="tel:+78001112233">
+                                            Заказать сейчас
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-tarrifs__controllers">
+                    <div class="container">
+                        <div class="swiper-tarrifs__inner">
+                            <button class="swiper-tarrifs__button swiper-tarrifs__button--prev"
+                                onClick="showPrevTarrif()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 25" fill="currentColor">
+                                    <path
+                                        d="M12.75 0C15.2717 0 17.7368 0.733112 19.8335 2.10663C21.9302 3.48015 23.5644 5.43238 24.5295 7.71646C25.4945 10.0005 25.747 12.5139 25.255 14.9386C24.7631 17.3634 23.5487 19.5907 21.7656 21.3388C19.9825 23.087 17.7107 24.2775 15.2374 24.7598C12.7641 25.2421 10.2005 24.9946 7.87079 24.0485C5.54103 23.1024 3.54975 21.5002 2.14876 19.4446C0.747776 17.389 1.90735e-06 14.9723 1.90735e-06 12.5C0.0039711 9.18599 1.34855 6.00882 3.73878 3.66546C6.129 1.3221 9.36971 0.00389197 12.75 0ZM12.75 23.5294C14.975 23.5294 17.1501 22.8825 19.0002 21.6706C20.8502 20.4587 22.2922 18.7361 23.1436 16.7208C23.9951 14.7054 24.2179 12.4878 23.7838 10.3483C23.3498 8.20877 22.2783 6.24352 20.705 4.70103C19.1316 3.15854 17.1271 2.10809 14.9448 1.68251C12.7625 1.25694 10.5005 1.47536 8.44481 2.31015C6.38914 3.14494 4.63214 4.55861 3.39597 6.37239C2.1598 8.18616 1.5 10.3186 1.5 12.5C1.50331 15.4242 2.68964 18.2277 4.7987 20.2954C6.90777 22.3631 9.76733 23.5262 12.75 23.5294ZM7.22 11.9804C7.07955 12.1183 7.00066 12.3051 7.00066 12.5C7.00066 12.6949 7.07955 12.8817 7.22 13.0196L11.22 16.9412C11.3622 17.0711 11.5502 17.1418 11.7445 17.1384C11.9388 17.135 12.1242 17.0579 12.2616 16.9232C12.399 16.7884 12.4777 16.6067 12.4812 16.4162C12.4846 16.2257 12.4125 16.0413 12.28 15.902L9.56125 13.2353H17.75C17.9489 13.2353 18.1397 13.1578 18.2803 13.0199C18.421 12.882 18.5 12.695 18.5 12.5C18.5 12.305 18.421 12.118 18.2803 11.9801C18.1397 11.8422 17.9489 11.7647 17.75 11.7647H9.56125L12.28 9.09804C12.4125 8.95865 12.4846 8.77429 12.4812 8.5838C12.4777 8.39331 12.399 8.21156 12.2616 8.07684C12.1242 7.94212 11.9388 7.86495 11.7445 7.86159C11.5502 7.85823 11.3622 7.92894 11.22 8.05882L7.22 11.9804Z" />
+                                </svg>
+                                <span class="visually-hidden">Предыдущий слайд</span>
+                            </button>
+
+                            <button class="swiper-tarrifs__button swiper-tarrifs__button--next"
+                                onClick="showNextTarrif()">
+                                <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 26 25" fill="currentColor">
+                                    <path
+                                        d="M12.75 0C10.2283 0 7.76321 0.733112 5.66648 2.10663C3.56976 3.48015 1.93556 5.43238 0.970541 7.71646C0.00552416 10.0005 -0.246968 12.5139 0.244993 14.9386C0.736955 17.3634 1.95127 19.5907 3.73439 21.3388C5.51751 23.087 7.78935 24.2775 10.2626 24.7598C12.7359 25.2421 15.2995 24.9946 17.6292 24.0485C19.959 23.1024 21.9503 21.5002 23.3512 19.4446C24.7522 17.389 25.5 14.9723 25.5 12.5C25.496 9.18599 24.1515 6.00882 21.7612 3.66546C19.371 1.3221 16.1303 0.00389197 12.75 0ZM12.75 23.5294C10.525 23.5294 8.34989 22.8825 6.49984 21.6706C4.64979 20.4587 3.20785 18.7361 2.35636 16.7208C1.50488 14.7054 1.28209 12.4878 1.71617 10.3483C2.15025 8.20877 3.22171 6.24352 4.79505 4.70103C6.3684 3.15854 8.37295 2.10809 10.5552 1.68251C12.7375 1.25694 14.9995 1.47536 17.0552 2.31015C19.1109 3.14494 20.8679 4.55861 22.104 6.37239C23.3402 8.18616 24 10.3186 24 12.5C23.9967 15.4242 22.8104 18.2277 20.7013 20.2954C18.5922 22.3631 15.7327 23.5262 12.75 23.5294ZM18.28 11.9804C18.4205 12.1183 18.4993 12.3051 18.4993 12.5C18.4993 12.6949 18.4205 12.8817 18.28 13.0196L14.28 16.9412C14.1378 17.0711 13.9498 17.1418 13.7555 17.1384C13.5612 17.135 13.3758 17.0579 13.2384 16.9232C13.101 16.7884 13.0223 16.6067 13.0188 16.4162C13.0154 16.2257 13.0875 16.0413 13.22 15.902L15.9388 13.2353H7.75001C7.55109 13.2353 7.36033 13.1578 7.21968 13.0199C7.07902 12.882 7.00001 12.695 7.00001 12.5C7.00001 12.305 7.07902 12.118 7.21968 11.9801C7.36033 11.8422 7.55109 11.7647 7.75001 11.7647H15.9388L13.22 9.09804C13.0875 8.95865 13.0154 8.77429 13.0188 8.5838C13.0223 8.39331 13.101 8.21156 13.2384 8.07684C13.3758 7.94212 13.5612 7.86495 13.7555 7.86159C13.9498 7.85823 14.1378 7.92894 14.28 8.05882L18.28 11.9804Z" />
+                                </svg>
+                                <span class="visually-hidden">Следующий слайд</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarrifs__smoke">
+                <picture>
+                    <source type="image/webp"
+                        srcset="assets/images/tarrifs/decorate/smoke-base.webp 1x, assets/images/tarrifs/decorate/smoke-base@2x.webp 2x">
+                    <img src="assets/images/tarrifs/decorate/smoke-base.png"
+                        srcset="assets/images/tarrifs/decorate/smoke-base@2x.png 2x" width="1314" height="458"
+                        alt="Основной дым" title="">
+                </picture>
+            </div>
+
+            <div class="tarrifs__smoke tarrifs__smoke--secondary">
+                <picture>
+                    <source type="image/webp"
+                        srcset="assets/images/tarrifs/decorate/smoke-secondary.webp 1x, assets/images/tarrifs/decorate/smoke-secondary@2x.webp 2x">
+                    <img src="assets/images/tarrifs/decorate/smoke-secondary.png"
+                        srcset="assets/images/tarrifs/decorate/smoke-secondary@2x.png 2x" width="1314" height="458"
+                        alt="Затемняющий дым" title="">
+                </picture>
+            </div>
+
+            <div class="tarrifs__ticker ticker" data-ticker="tarrifs">
+                <div class="ticker__wrapper">
+                    <div class="ticker__item">Comfort Plus</div>
+                    <div class="ticker__item">Comfort Plus</div>
+                    <div class="ticker__item">Comfort Plus</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service">
+            <div class="container">
+                <div class="service__inner">
+                    <h2 class="service__title title">
+                        Удобный сервис для всех клиентов
+                    </h2>
+                    <ul class="service__list">
+                        <li class="service__item advantage">
+                            <div class="advantage__information">
+                                <h3 class="advantage__title">
+                                    Безналичная оплата
+                                </h3>
+                                <p class="advantage__description">
+                                    Оплачивайте поедки QR-кодом или по счету
+                                </p>
+                            </div>
+                            <div class="advantage__image">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 1100px)"
+                                        srcset="assets/images/service/advantages/pay/pay-big.webp 1x, assets/images/service/advantages/pay/pay-big@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/pay/pay-medium.webp 1x, assets/images/service/advantages/pay/pay-medium@2x.webp 2x">
+                                    <source type="image/webp"
+                                        srcset="assets/images/service/advantages/pay/pay-small.webp 1x, assets/images/service/advantages/pay/pay-small@2x.webp 2x">
+                                    <source media="(min-width: 1000px)"
+                                        srcset="assets/images/service/advantages/pay/pay-big.png 1x, assets/images/service/advantages/pay/pay-big@2x.png 2x">
+                                    <source media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/pay/pay-medium.png 1x, assets/images/service/advantages/pay/pay-medium@2x.png 2x">
+                                    <img src="assets/images/service/advantages/pay/pay-small.png"
+                                        srcset="assets/images/service/advantages/pay/pay-small@2x.png 2x" width="288"
+                                        height="197" alt="Картхолдер в кармане пиджака">
+                                </picture>
+                            </div>
+                        </li>
+
+                        <li class="service__item advantage">
+                            <div class="advantage__information">
+                                <h3 class="advantage__title">
+                                    Помощь с багажом
+                                </h3>
+                                <p class="advantage__description">
+                                    Водитель сам погрузит и выгрузит ваш багаж
+                                </p>
+                            </div>
+                            <div class="advantage__image">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 1100px)"
+                                        srcset="assets/images/service/advantages/baggage/baggage-big.webp 1x, assets/images/service/advantages/baggage/baggage-big@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/baggage/baggage-medium.webp 1x, assets/images/service/advantages/baggage/baggage-medium@2x.webp 2x">
+                                    <source type="image/webp"
+                                        srcset="assets/images/service/advantages/baggage/baggage-small.webp 1x, assets/images/service/advantages/baggage/baggage-small@2x.webp 2x">
+                                    <source media="(min-width: 1000px)"
+                                        srcset="assets/images/service/advantages/baggage/baggage-big.png 1x, assets/images/service/advantages/baggage/baggage-big@2x.png 2x">
+                                    <source media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/baggage/baggage-medium.png 1x, assets/images/service/advantages/baggage/baggage-medium@2x.png 2x">
+                                    <img src="assets/images/service/advantages/baggage/baggage-small.png"
+                                        srcset="assets/images/service/advantages/baggage/baggage-small@2x.png 2x"
+                                        width="288" height="197" alt="Мужчина несет багаж клиента">
+                                </picture>
+                            </div>
+                        </li>
+
+                        <li class="service__item advantage">
+                            <div class="advantage__information">
+                                <h3 class="advantage__title">
+                                    Встретим вас с табличкой
+                                </h3>
+                                <p class="advantage__description">
+                                    Наш водитель встретит вас с табличкой с вашим
+                                    Именем и Фамилией </p>
+                            </div>
+                            <div class="advantage__image">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 1100px)"
+                                        srcset="assets/images/service/advantages/nameplate/nameplate-big.webp 1x, assets/images/service/advantages/nameplate/nameplate-big@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/nameplate/nameplate-medium.webp 1x, assets/images/service/advantages/nameplate/nameplate-medium@2x.webp 2x">
+                                    <source type="image/webp"
+                                        srcset="assets/images/service/advantages/nameplate/nameplate-small.webp 1x, assets/images/service/advantages/nameplate/nameplate-small@2x.webp 2x">
+                                    <source media="(min-width: 1000px)"
+                                        srcset="assets/images/service/advantages/nameplate/nameplate-big.png 1x, assets/images/service/advantages/nameplate/nameplate-big@2x.png 2x">
+                                    <source media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/nameplate/nameplate-medium.png 1x, assets/images/service/advantages/nameplate/nameplate-medium@2x.png 2x">
+                                    <img src="assets/images/service/advantages/nameplate/nameplate-small.png"
+                                        srcset="assets/images/service/advantages/nameplate/nameplate-small@2x.png 2x"
+                                        width="288" height="197" alt="Женщина ищет человека с табличкой">
+                                </picture>
+                            </div>
+                        </li>
+
+                        <li class="service__item advantage">
+                            <div class="advantage__information">
+                                <h3 class="advantage__title">
+                                    Бесплатное ожидание
+                                </h3>
+                                <p class="advantage__description">
+                                    Бесплатное ожидание до 60 мин.
+                                    при встрече в аэрапорту
+                                </p>
+                            </div>
+                            <div class="advantage__image">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 1100px)"
+                                        srcset="assets/images/service/advantages/free/free-big.webp 1x, assets/images/service/advantages/free/free-big@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/free/free-medium.webp 1x, assets/images/service/advantages/free/free-medium@2x.webp 2x">
+                                    <source type="image/webp"
+                                        srcset="assets/images/service/advantages/free/free-small.webp 1x, assets/images/service/advantages/free/free-small@2x.webp 2x">
+                                    <source media="(min-width: 1000px)"
+                                        srcset="assets/images/service/advantages/free/free-big.png 1x, assets/images/service/advantages/free/free-big@2x.png 2x">
+                                    <source media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/free/free-medium.png 1x, assets/images/service/advantages/free/free-medium@2x.png 2x">
+                                    <img src="assets/images/service/advantages/free/free-small.png"
+                                        srcset="assets/images/service/advantages/free/free-small@2x.png 2x" width="288"
+                                        height="197" alt="Водитель сидит в машине, рука на руле">
+                                </picture>
+                            </div>
+                        </li>
+
+                        <li class="service__item advantage">
+                            <div class="advantage__information">
+                                <h3 class="advantage__title">
+                                    Система оповещений
+                                </h3>
+                                <p class="advantage__description">
+                                    Заранее пришлем по СМС номер автомобиля и уведомление, что водитель в пути
+                                </p>
+                            </div>
+                            <div class="advantage__image">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 1100px)"
+                                        srcset="assets/images/service/advantages/notification/notification-big.webp 1x, assets/images/service/advantages/notification/notification-big@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/notification/notification-medium.webp 1x, assets/images/service/advantages/notification/notification-medium@2x.webp 2x">
+                                    <source type="image/webp"
+                                        srcset="assets/images/service/advantages/notification/notification-small.webp 1x, assets/images/service/advantages/notification/notification-small@2x.webp 2x">
+                                    <source media="(min-width: 1000px)"
+                                        srcset="assets/images/service/advantages/notification/notification-big.png 1x, assets/images/service/advantages/notification/notification-big@2x.png 2x">
+                                    <source media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/notification/notification-medium.png 1x, assets/images/service/advantages/notification/notification-medium@2x.png 2x">
+                                    <img src="assets/images/service/advantages/notification/notification-small.png"
+                                        srcset="assets/images/service/advantages/notification/notification-small@2x.png 2x"
+                                        width="288" height="197" alt="Мужчина разговаривает с оператором по телефону">
+                                </picture>
+                            </div>
+                        </li>
+
+                        <li class="service__item advantage">
+                            <div class="advantage__information">
+                                <h3 class="advantage__title">
+                                    Корпоративные клиенты
+                                </h3>
+                                <p class="advantage__description">
+                                    Особые условия для корпаративных клиентов с максимально подходящими условиямию
+                                </p>
+                            </div>
+                            <div class="advantage__image">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 1100px)"
+                                        srcset="assets/images/service/advantages/corporate/corporate-big.webp 1x, assets/images/service/advantages/corporate/corporate-big@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/corporate/corporate-medium.webp 1x, assets/images/service/advantages/corporate/corporate-medium@2x.webp 2x">
+                                    <source type="image/webp"
+                                        srcset="assets/images/service/advantages/corporate/corporate-small.webp 1x, assets/images/service/advantages/corporate/corporate-small@2x.webp 2x">
+                                    <source media="(min-width: 1000px)"
+                                        srcset="assets/images/service/advantages/corporate/corporate-big.png 1x, assets/images/service/advantages/corporate/corporate-big@2x.png 2x">
+                                    <source media="(min-width: 950px)"
+                                        srcset="assets/images/service/advantages/corporate/corporate-medium.png 1x, assets/images/service/advantages/corporate/corporate-medium@2x.png 2x">
+                                    <img src="assets/images/service/advantages/corporate/corporate-small.png"
+                                        srcset="assets/images/service/advantages/corporate/corporate-small@2x.png 2x"
+                                        width="288" height="197" alt="Сотрудники в офисе за столом">
+                                </picture>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="contact__inner">
+                    <h2 class="contact__title title visually-hidden">
+                        Обратная форма связи
+                    </h2>
+
+                    <div class="contact__top">
+                        <p class="contact__description">
+                            Введите ваши данные и мы с вами свяжемся
+                        </p>
+
+                        <ul class="contact__list">
+                            <li class="contact__item option">
+                                <p class="option__text">
+                                    Индивидуальные и групповые трансферы из аэрапортов, вокзалов и гостиниц
+                                </p>
+                            </li>
+
+                            <li class="contact__item option">
+                                <p class="option__text">
+                                    Пассажирские перевозки по городу
+                                    и междугородние трансферы
+                                </p>
+                            </li>
+
+                            <li class="contact__item option">
+                                <p class="option__text">
+                                    Организация транспотного сопровождения
+                                    для любых мероприятий
+                                </p>
+                            </li>
+
+                            <li class="contact__item option">
+                                <p class="option__text">
+                                    Аренда высококлассных водителей
+                                    с личным автомобилем
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form class="contact__form form" action="#">
+                        <ul class="form__list">
+                            <li class="form__item">
+                                <label class="visually-hidden" for="name">Имя</label>
+                                <input class="form__input" name="name" id="name" type="text" placeholder="Ваше имя">
+                            </li>
+
+                            <li class="form__item">
+                                <label class="visually-hidden" for="phone">Номер телефона</label>
+                                <input class="form__input" name="phone" id="phone" type="tel" placeholder="Ваш телефон">
+                            </li>
+                        </ul>
+
+                        <label class="visually-hidden" for="comments">Комментарии к заказу</label>
+                        <textarea class="form__text" name="comments" id="comments" cols="30" autocomplete="off"
+                            placeholder="Комментарии к заказу"></textarea>
+
+                        <button class="form__button button" type="submit">
+                            Заказать сейчас
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact__image">
+                <picture>
+                    <source type="image/webp"
+                        srcset="assets/images/contact/background/car.webp 1x, assets/images/contact/background/car@2x.webp 2x">
+                    <img src="assets/images/contact/background/car.png"
+                        srcset="assets/images/contact/background/car@2x.png 2x" width="1314" height="748"
+                        alt="Салон автомобиля Skoda Octavia" title="">
+                </picture>
+            </div>
+        </section>
+
+        <section class="about">
+            <a class="about__anchor visually-hidden" id="about"></a>
+
+            <div class="container">
+                <div class="about__inner">
+                    <div class="about__image">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="assets/images/about/owner.webp 1x, assets/images/about/owner@2x.webp 2x">
+                            <img src="assets/images/about/owner.png" srcset="assets/images/about/owner@2x.png 2x"
+                                width="586" height="510" alt="Владелец компании на фоне домов" title="">
+                        </picture>
+                    </div>
+                    <div class="about__information">
+                        <h2 class="about__title title">
+                            О компании
+                        </h2>
+                        <div class="about__description">
+                            <div class="about__text">
+                                <p class="about__chunk">
+                                    <span class="highlight">Наша компания предоставляет премиальные услуги трансфера для
+                                        деловых людей,
+                                        ценящих свое время и комфорт.</span>
+                                    <span class="highlight">Мы предлагаем широкий выбор автомобилей бизнес-класса,
+                                        которые отличаются
+                                        элегантностью, техническим совершенством и исключительным комфортом.</span>
+                                </p>
+                                <p class="about__chunk">
+                                    <span class="highlight">Наши опытные водители обеспечивают безопасность и надежность
+                                        в пути,
+                                        а также гарантируют точность и пунктуальность в каждой поездке.</span>
+                                    <span class="highlight">Мы понимаем
+                                        уникальные потребности наших клиентов и предлагаем персонализированный сервис,
+                                        включая возможность бронирования через звонок.</span>
+                                </p>
+                                <p class="about__chunk about__chunk--important">
+                                    <span class="">Трансфер – ваш надежный партнер в мире комфортных
+                                        и продуктивных деловых поездок.</span>
+                                </p>
+                            </div>
+                            <div class="about__owner">
+                                <p class="about__name">
+                                    Александр Платов
+                                </p>
+                                <p class="about__role">
+                                    Основатель компании
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <a class="reviews__anchor visually-hidden" id="reviews"></a>
+
+            <div class="container">
+                <div class="reviews__inner">
+                    <h2 class="reviews__title title">
+                        Отзывы клиентов
+                    </h2>
+                    <ul class="reviews__list">
+                        <li class="reviews__item review">
+                            <div class="review__content">
+                                <div class="review__header">
+                                    <p class="review__name">
+                                        Дмитрий Анатольевич
+                                    </p>
+                                    <p class="review__role">
+                                        Частный клиент
+                                    </p>
+                                </div>
+
+                                <div class="review__text">
+                                    <p class="review__chunk">
+                                        Наши опытные водители обеспечивают безопасность и надежность в пути, а также
+                                        гарантируют точность и пунктуальность в каждой поездке.
+                                    </p>
+
+                                    <p class="review__chunk">
+                                        Мы понимаем уникальные потребности наших клиентов и предлагаем
+                                        персонализированный сервис, включая возможность бронирования через звонок.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="reviews__item review">
+                            <div class="review__content">
+                                <div class="review__header">
+                                    <p class="review__name">
+                                        Дмитрий Анатольевич
+                                    </p>
+                                    <p class="review__role">
+                                        Частный клиент
+                                    </p>
+                                </div>
+
+                                <div class="review__text">
+                                    <p class="review__chunk">
+                                        Наши опытные водители обеспечивают безопасность и надежность в пути, а также
+                                        гарантируют точность и пунктуальность в каждой поездке.
+                                    </p>
+
+                                    <p class="review__chunk">
+                                        Мы понимаем уникальные потребности наших клиентов и предлагаем
+                                        персонализированный сервис, включая возможность бронирования через звонок.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="reviews__item review">
+                            <div class="review__content">
+                                <div class="review__header">
+                                    <p class="review__name">
+                                        Дмитрий Анатольевич
+                                    </p>
+                                    <p class="review__role">
+                                        Частный клиент
+                                    </p>
+                                </div>
+
+                                <div class="review__text">
+                                    <p class="review__chunk">
+                                        Наши опытные водители обеспечивают безопасность и надежность в пути, а также
+                                        гарантируют точность и пунктуальность в каждой поездке.
+                                    </p>
+
+                                    <p class="review__chunk">
+                                        Мы понимаем уникальные потребности наших клиентов и предлагаем
+                                        персонализированный сервис, включая возможность бронирования через звонок.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="reviews__item review review--action">
+                            <div class="review__content">
+                                <div class="review__header">
+                                    <p class="review__name">
+                                        Оставить отзыв
+                                    </p>
+                                    <p class="review__role">
+                                        Мы ценим мнение каждого клиента
+                                    </p>
+                                    <a class="review__icon" href="#">
+                                        <span class="visually-hidden">Оставить отзыв</span>
+                                        <svg width="56" height="56">
+                                            <use xlink:href="assets/images/sprite.svg#plus" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="review__bottom">
+                                <p class="review__all">
+                                    Смотреть все отзывы
+                                </p>
+                                <button class="review__button button" onClick="openModal('.modal--reviews')">
+                                    Открыть
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal modal--tarrifs" data-modal="tarrifs">
+            <div class="container">
+                <div class="modal__inner">
+                    <button class="modal__close" onClick="closeModal('.modal--tarrifs')">
+                        <svg width="23" height="23">
+                            <use xlink:href="assets/images/sprite.svg#close" />
+                        </svg>
+                    </button>
+
+                    <h2 class="modal__title title">
+                        Выберите тариф
+                    </h2>
+
+                    <ul class="modal__list cards">
+                        <li class="modal__item card" data-card="comfort-plus">
+                            <div class="card__header">
+                                <p class="card__price">
+                                    3000 руб./час
+                                </p>
+                                <h3 class="card__title">
+                                    Comfort plus
+                                </h3>
+                            </div>
+
+                            <div class="card__footer">
+                                <ul class="card__list">
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                </ul>
+
+                                <ul class="card__list card__list--option">
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#children" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#water" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item card__item--wifi">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="assets/images/sprite.svg#wifi" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#music" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#charger" />
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card__car">
+                                <div class="card__image">
+                                    <picture>
+                                        <source type="image/webp"
+                                            srcset="assets/images/card/car/mercedes.webp 1x, assets/images/card/car/mercedes@2x.webp 2x">
+                                        <img src="assets/images/card/car/mercedes.png"
+                                            srcset="assets/images/card/car/mercedes@2x.png 2x" width="352" height="160"
+                                            alt="Mercedes E200" title="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="modal__item card" data-card="comfort">
+                            <div class="card__header">
+                                <p class="card__price">
+                                    3000 руб./час
+                                </p>
+                                <h3 class="card__title">
+                                    Comfort
+                                </h3>
+                            </div>
+
+                            <div class="card__footer">
+                                <ul class="card__list">
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                </ul>
+
+                                <ul class="card__list card__list--option">
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#children" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#water" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item card__item--wifi">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="assets/images/sprite.svg#wifi" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#music" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#charger" />
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card__car">
+                                <div class="card__image">
+                                    <picture>
+                                        <source type="image/webp"
+                                            srcset="assets/images/card/car/mercedes.webp 1x, assets/images/card/car/mercedes@2x.webp 2x">
+                                        <img src="assets/images/card/car/mercedes.png"
+                                            srcset="assets/images/card/car/mercedes@2x.png 2x" width="352" height="160"
+                                            alt="Mercedes E200" title="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="modal__item card" data-card="standart-plus">
+                            <div class="card__header">
+                                <p class="card__price">
+                                    3000 руб./час
+                                </p>
+                                <h3 class="card__title">
+                                    Standart plus
+                                </h3>
+                            </div>
+
+                            <div class="card__footer">
+                                <ul class="card__list">
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#passenger" />
+                                        </svg>
+                                    </li>
+                                </ul>
+
+                                <ul class="card__list card__list--option">
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#children" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#water" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item card__item--wifi">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="assets/images/sprite.svg#wifi" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#music" />
+                                        </svg>
+                                    </li>
+                                    <li class="card__item">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="assets/images/sprite.svg#charger" />
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card__car">
+                                <div class="card__image">
+                                    <picture>
+                                        <source type="image/webp"
+                                            srcset="assets/images/card/car/mercedes.webp 1x, assets/images/card/car/mercedes@2x.webp 2x">
+                                        <img src="assets/images/card/car/mercedes.png"
+                                            srcset="assets/images/card/car/mercedes@2x.png 2x" width="352" height="160"
+                                            alt="Mercedes E200" title="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="modal__button button">
+                        Загрузить еще
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--reviews">
+            <div class="container">
+                <div class="modal__inner">
+                    <button class="modal__close" onClick="closeModal('.modal--reviews')">
+                        <svg width="23" height="23">
+                            <use xlink:href="assets/images/sprite.svg#close" />
+                        </svg>
+                    </button>
+
+                    <h2 class="modal__title title">
+                        Отзывы клиентов
+                    </h2>
+
+                    <div class="modal__content reviews reviews--modal">
+                        <div class="container">
+                            <div class="reviews__inner">
+                                <ul class="reviews__list">
+                                    <li class="reviews__item review">
+                                        <div class="review__content">
+                                            <div class="review__header">
+                                                <p class="review__name">
+                                                    Дмитрий Анатольевич
+                                                </p>
+                                                <p class="review__role">
+                                                    Частный клиент
+                                                </p>
+                                            </div>
+
+                                            <div class="review__text">
+                                                <p class="review__chunk">
+                                                    Наши опытные водители обеспечивают безопасность и надежность в пути,
+                                                    а также
+                                                    гарантируют точность и пунктуальность в каждой поездке.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="reviews__item review">
+                                        <div class="review__content">
+                                            <div class="review__header">
+                                                <p class="review__name">
+                                                    Дмитрий Анатольевич
+                                                </p>
+                                                <p class="review__role">
+                                                    Частный клиент
+                                                </p>
+                                            </div>
+
+                                            <div class="review__text">
+                                                <p class="review__chunk">
+                                                    Наши опытные водители обеспечивают безопасность и надежность в пути,
+                                                    а также
+                                                    гарантируют точность и пунктуальность в каждой поездке.
+                                                </p>
+
+                                                <p class="review__chunk">
+                                                    Мы понимаем уникальные потребности наших клиентов и предлагаем
+                                                    персонализированный сервис, включая возможность бронирования через
+                                                    звонок.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="reviews__item review">
+                                        <div class="review__content">
+                                            <div class="review__header">
+                                                <p class="review__name">
+                                                    Дмитрий Анатольевич
+                                                </p>
+                                                <p class="review__role">
+                                                    Частный клиент
+                                                </p>
+                                            </div>
+
+                                            <div class="review__text">
+                                                <p class="review__chunk">
+                                                    Наши опытные водители обеспечивают безопасность и надежность в пути,
+                                                    а также
+                                                    гарантируют точность и пунктуальность в каждой поездке.
+                                                </p>
+
+                                                <p class="review__chunk">
+                                                    Мы понимаем уникальные потребности наших клиентов и предлагаем
+                                                    персонализированный сервис, включая возможность бронирования через
+                                                    звонок.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="reviews__item review">
+                                        <div class="review__content">
+                                            <div class="review__header">
+                                                <p class="review__name">
+                                                    Дмитрий Анатольевич
+                                                </p>
+                                                <p class="review__role">
+                                                    Частный клиент
+                                                </p>
+                                            </div>
+
+                                            <div class="review__text">
+                                                <p class="review__chunk">
+                                                    Наши опытные водители обеспечивают безопасность и надежность в пути,
+                                                    а также
+                                                    гарантируют точность и пунктуальность в каждой поездке.
+                                                </p>
+
+                                                <p class="review__chunk">
+                                                    Мы понимаем уникальные потребности наших клиентов и предлагаем
+                                                    персонализированный сервис.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="modal__button button">
+                        Загрузить еще
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page__footer footer">
+        <div class="footer__map">
+            <svg width="1395" height="1080">
+                <use xlink:href="assets/images/sprite.svg#map" />
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo logo">
+                    <div class="logo__icon">
+                        <svg width="128" height="43">
+                            <use xlink:href="assets/images/sprite.svg#logo" />
+                        </svg>
+                    </div>
+                    <p class="logo__text">
+                        <span>PLATOV</span>
+                        <span>TRANSFER</span>
+                    </p>
+                </div>
+
+                <div class="footer__contacts">
+                    <div class="footer__number">
+                        <h2 class="footer__title title title--white">
+                            Контакты
+                        </h2>
+                        <a class="footer__phone phone phone--big" target="_blank" href="tel:+78001112233">
+                            +7 800 111 22 33
+                        </a>
+                    </div>
+                    <ul class="footer__media media media--column">
+                        <li class="media__item">
+                            <a class="media__link media__link--tg" href="#">
+                                <svg width="31" height="31">
+                                    <use xlink:href="assets/images/sprite.svg#telegram" />
+                                </svg>
+                                <span class="visually-hidden">Телеграмм</span>
+                            </a>
+                        </li>
+
+                        <li class="media__item">
+                            <a class="media__link media__link--whatsapp" href="#">
+                                <svg width="31" height="31">
+                                    <use xlink:href="assets/images/sprite.svg#whatsapp" />
+                                </svg>
+                                <span class="visually-hidden">Вотсапп</span>
+                            </a>
+                        </li>
+
+                        <li class="media__item">
+                            <a class="media__link media__link--vk" href="#">
+                                <svg width="31" height="31">
+                                    <use xlink:href="assets/images/sprite.svg#vk" />
+                                </svg>
+                                <span class="visually-hidden">Вконтакте</span>
+                            </a>
+                        </li>
+
+                        <li class="media__item">
+                            <a class="media__link media__link--avito" href="#">
+                                <svg width="29" height="29">
+                                    <use xlink:href="assets/images/sprite.svg#avito" />
+                                </svg>
+                                <span class="visually-hidden">Авито</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__image">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/hero/mercedes.webp 1x, assets/images/hero/mercedes@2x.webp 2x">
+                        <img src="assets/images/hero/mercedes.png" srcset="assets/images/hero/mercedes@2x.png 2x"
+                            width="1060" height="459" alt="Белый Mercedes S63 Coupe" title="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <div class="footer__ticker ticker">
+            <div class="ticker__wrapper">
+                <div class="ticker__item">Platov transfer</div>
+                <div class="ticker__item">Platov transfer</div>
+                <div class="ticker__item">Platov transfer</div>
+                <div class="ticker__item">Platov transfer</div>
+                <div class="ticker__item">Platov transfer</div>
+            </div>
+        </div>
+
+        <div class="footer__smoke">
+            <picture>
+                <source type="image/webp"
+                    srcset="assets/images/footer/decorate/smoke-base.webp 1x, assets/images/footer/decorate/smoke-base@2x.webp 2x">
+                <img src="assets/images/footer/decorate/smoke-base.png"
+                    srcset="assets/images/footer/decorate/smoke-base@2x.png 2x" width="1314" height="392"
+                    alt="Основной дым" title="">
+            </picture>
+        </div>
+
+        <div class="footer__smoke footer__smoke--second">
+            <picture>
+                <source type="image/webp"
+                    srcset="assets/images/footer/decorate/smoke-second.webp 1x, assets/images/footer/decorate/smoke-second@2x.webp 2x">
+                <img src="assets/images/footer/decorate/smoke-second.png"
+                    srcset="assets/images/footer/decorate/smoke-second@2x.png 2x" width="1314" height="392"
+                    alt="Затемняющий дым" title="">
+            </picture>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="assets/js/index.min.js"></script>
+</body>
+
+</html>

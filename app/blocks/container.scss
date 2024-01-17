@@ -1,0 +1,15 @@
+/* Container */
+
+.container {
+    position: relative;
+
+    width: 100%;
+    max-width: $desktop-width;
+    height: 100%;
+    padding-inline: 16px;
+
+    @media screen and (min-width: $desktop-width) {
+        margin-inline: auto;
+        padding: 0;
+    }
+}

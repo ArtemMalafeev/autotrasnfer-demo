@@ -1,0 +1,307 @@
+/* Tarrif */
+
+/* Title */
+
+.tarrif__title {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $tablet-width) {
+        font-size: 64px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        margin-bottom: 0;
+        font-size: 131.081px;
+    }
+}
+
+/* Top */
+
+.tarrif__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        column-gap: 50px;
+        justify-content: space-between;
+    }
+}
+
+/* Information */
+
+.tarrif__information {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+/* Description */
+
+.tarrif__description {
+    max-width: 610px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-weight: 350;
+    color: $white;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-width) {
+        margin-right: initial;
+        margin-left: initial;
+        text-align: initial;
+    }
+}
+
+/* Section */
+
+.tarrif__section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/* Section Name */
+
+.tarrif__section-name {
+    font-weight: 400;
+    color: $gold;
+    text-transform: uppercase;
+}
+
+/* Models */
+
+.tarrif__models {
+    display: flex;
+    column-gap: 41px;
+}
+
+/* Model */
+
+.tarrif__model {
+    color: $white;
+    text-transform: uppercase;
+}
+
+/* Price */
+
+.tarrif__price {
+    font-size: var(--medium-font-size);
+    font-weight: 350;
+    color: $white;
+}
+
+/* Value */
+
+.tarrif__value {
+    font-weight: 700;
+}
+
+/* Image */
+
+.tarrif__image {
+    position: relative;
+
+    width: 95%;
+    height: auto;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        left: -10%;
+
+        width: 120%;
+        height: 80px;
+
+        background-color: #160F29;
+        filter: blur(40px);
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        margin-top: -30px;
+
+        &::after {
+            height: 150px;
+        }
+    }
+}
+
+.tarrif__image img {
+    @include image;
+}
+
+/* Footer */
+
+.tarrif__footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+
+    padding-block: 24px;
+
+    border-top: 1px solid $white;
+
+    @media screen and (min-width: $desktop-width) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* Points */
+
+.tarrif__points {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+
+    @media screen and (width >=490px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        column-gap: 50px;
+    }
+}
+
+/* Button */
+
+.tarrif__buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    max-width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $desktop-width) {
+        flex-direction: row;
+        column-gap: 50px;
+        margin-right: initial;
+        margin-left: initial;
+    }
+}
+
+/* Option */
+
+.tarrif__option {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Passengers */
+
+.tarrif__passengers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Option/Passengers List */
+
+.tarrif__option-list,
+.tarrif__passengers-list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.tarrif__option-item,
+.tarrif__passengers-item {
+    color: $gold;
+}
+
+.tarrif__option-item {
+    cursor: help;
+    position: relative;
+    width: 25px;
+    height: 25px;
+
+    &--wifi {
+        width: 42px;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.tarrif__notification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -120%);
+
+    width: max-content;
+    padding: 5px;
+
+    font-size: var(--small-font-size);
+
+    opacity: 0;
+    background: linear-gradient(180deg, #08060F 0%, #160F29 100%);
+    border: 1px solid $gold;
+
+    transition: all .25s ease;
+}
+
+.tarrif__option-item:hover .tarrif__notification {
+    opacity: 1;
+}
+
+.tarrif__passengers-item {
+    width: 25px;
+    height: 25px;
+
+    @media screen and (min-width: $tablet-width) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.tarrif__option-item svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tarrif__passengers-item svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Option/Passengers Name */
+
+.tarrif__option-name,
+.tarrif__passengers-name {
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    white-space: nowrap;
+}

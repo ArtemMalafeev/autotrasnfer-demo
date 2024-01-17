@@ -1,0 +1,67 @@
+/* Base */
+
+@import 'fonts';
+@import 'variables';
+@import 'utils';
+@import 'mixins';
+// @import 'seo';
+
+/* Blocks */
+
+@import '../../blocks/index';
+
+/* Reset */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+pre {
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;               /* ширина всей полосы прокрутки */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;        /* цвет зоны отслеживания */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: transparent;    /* цвет бегунка */
+    border-radius: 0px;       /* округлось бегунка */
+    border: 0px solid transparent;  /* отступ вокруг бегунка */
+  }
